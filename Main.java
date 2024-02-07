@@ -6,7 +6,7 @@ class Main {
         int testcase=scan.nextInt();
         while(testcase-->0){
             int num=scan.nextInt();
-            ps.pattern8(num);
+            ps.pattern9(num);
         }
     }
 }
@@ -89,6 +89,27 @@ class PatternSolution{
             for(int space=1;space<=(n-i);space++){
                 System.out.print(" ");
             }
+            System.out.println();
+        }
+    }
+    public static void pattern9(int n){
+        int stars=(n*2)-1,spaces1=0,spaces2=0;
+        for(int i=1;i<=n;i++){
+            //space
+            for(int space=1;space<=spaces1;space++){
+                System.out.print(" ");
+            }
+            //stars
+            for(int j=stars;j>=1;j--){
+                System.out.print("*");
+            }
+            stars-=2;
+            //space
+            for(int space=1;space<=spaces2;space++){
+                System.out.print(" ");
+            }
+            spaces2++;
+            spaces1++;
             System.out.println();
         }
     }
